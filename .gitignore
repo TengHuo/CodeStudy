@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/macos,python,jupyternotebook
 
 ### Data Analysis ###
-Data/*
+Data/
 
 ### JupyterNotebook ###
 .ipynb_checkpoints
