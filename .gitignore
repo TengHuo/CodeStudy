@@ -213,6 +213,8 @@ venv.bak/
 enron_mail_20150507.tar.gz
 test.png
 maildir/
+*.pkl
+*.pdf
 text_learning/your_word_data.pkl
 text_learning/your_email_authors.pkl
 my_classifier.pkl
