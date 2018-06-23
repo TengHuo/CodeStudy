@@ -13,4 +13,3 @@ It is the first competition I joined. For now my best score is 0.78468. I used r
 3. new feature: FamilySize
 4. find a new way to guess age
 5. get more information from embarked
-
