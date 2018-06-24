@@ -221,5 +221,6 @@ my_dataset.pkl
 my_feature_list.pkl
 input/
 submission.csv
+MNIST_data/
 
 # End of https://www.gitignore.io/api/macos,python,pycharm,jupyternotebook,visualstudiocode
