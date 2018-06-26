@@ -4,8 +4,9 @@
 
 import tensorflow as tf
 import pandas as pd
-from sklearn.model_selection import train_test_split
 import numpy as np
+
+BATCH_SIZE = 200
 
 data = pd.read_csv('./input/train.csv')
 images = data.values[:, 1:]
@@ -22,16 +23,30 @@ labels = onehot_labels.astype(np.uint8)
 print('Labels shape: {}'.format(labels.shape))
 
 
+def add_layer(inputs, in_size, out_size, activate_function=None):
+    W = tf.Variable(tf.random_normal([in_size, out_size]))
+    biases = tf.Variable(tf.zeros([1, out_size]) + 0.1)
+    Wx_plus_b = tf.matmul(inputs, W) + biases
+
+    if activate_function is None:
+        outputs = Wx_plus_b
+    else:
+        outputs = activate_function(Wx_plus_b)
+    return outputs
+
+
 x = tf.placeholder(tf.float32, [None, 784])
 y_ = tf.placeholder(tf.float32, [None, 10])
 
-W = tf.Variable(tf.zeros([784, 10]))
-b = tf.Variable(tf.zeros([10]))
+# W = tf.Variable(tf.zeros([784, 10]))
+# b = tf.Variable(tf.zeros([10]))
+# y = tf.nn.softmax(tf.matmul(x, W) + b)
 
-y = tf.nn.softmax(tf.matmul(x, W) + b)
+layer1 = add_layer(x, 784, 100, activate_function=tf.nn.softmax)
+layer2 = add_layer(layer1, 100, 100, activate_function=tf.nn.softmax)
+y = add_layer(layer2, 100, 10, activate_function=tf.nn.softmax)
 cross_entropy = - tf.reduce_sum(y_*tf.log(y))
-train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
-
+train_step = tf.train.AdamOptimizer(0.01).minimize(cross_entropy)
 
 TEST_SIZE = 2000
 test_images = images[:TEST_SIZE]
@@ -77,8 +92,8 @@ sess.run(init)
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
-for i in range(1000):
-    batch_xs, batch_ys = next_batch(200)
+for i in range(20000):
+    batch_xs, batch_ys = next_batch(BATCH_SIZE)
     sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
     if i % 50 == 0:
         print('ACCURACY: {}'.format(sess.run(accuracy, feed_dict={x: test_images, y_: test_labels})))
