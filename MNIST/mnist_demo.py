@@ -5,22 +5,23 @@
 import tensorflow as tf
 import pandas as pd
 import numpy as np
+import datetime
 
 BATCH_SIZE = 200
 
-data = pd.read_csv('./input/train.csv')
-images = data.values[:, 1:]
-images = images.astype(np.float)
-images = np.multiply(images, 1.0 / 255.0)
-print('Images shape: {}'.format(images.shape))
 
-labels = data.values[:, 0]
-onehot_labels = np.zeros([labels.shape[0], 10])
-for i in range(labels.shape[0]):
-    onehot_labels[i][labels[i]] = 1
+def preprocess_images(images):
+    processed_images = images.astype(np.float)
+    processed_images = np.multiply(processed_images, 1.0 / 255.0)
+    return processed_images
 
-labels = onehot_labels.astype(np.uint8)
-print('Labels shape: {}'.format(labels.shape))
+
+def preprocess_labels(labels):
+    one_hot_labels = np.zeros([labels.shape[0], 10])
+    for i in range(labels.shape[0]):
+        one_hot_labels[i][labels[i]] = 1
+
+    return one_hot_labels.astype(np.uint8)
 
 
 def add_layer(inputs, in_size, out_size, activate_function=None):
@@ -35,6 +36,18 @@ def add_layer(inputs, in_size, out_size, activate_function=None):
     return outputs
 
 
+data = pd.read_csv('./input/train.csv')
+submission_data = pd.read_csv('./input/test.csv')
+
+images = preprocess_images(data.values[:, 1:])
+submission_images = preprocess_images(submission_data.values)
+print('All Images shape: {}'.format(images.shape))
+print('Submission Images shape: {}'.format(submission_images.shape))
+
+labels = preprocess_labels(data.values[:, 0])
+print('Labels shape: {}'.format(labels.shape))
+
+
 x = tf.placeholder(tf.float32, [None, 784])
 y_ = tf.placeholder(tf.float32, [None, 10])
 
@@ -45,6 +58,7 @@ y_ = tf.placeholder(tf.float32, [None, 10])
 layer1 = add_layer(x, 784, 100, activate_function=tf.nn.softmax)
 layer2 = add_layer(layer1, 100, 100, activate_function=tf.nn.softmax)
 y = add_layer(layer2, 100, 10, activate_function=tf.nn.softmax)
+
 cross_entropy = - tf.reduce_sum(y_*tf.log(y))
 train_step = tf.train.AdamOptimizer(0.01).minimize(cross_entropy)
 
@@ -92,10 +106,23 @@ sess.run(init)
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
+t0 = datetime.datetime.now()
 for i in range(20000):
     batch_xs, batch_ys = next_batch(BATCH_SIZE)
     sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
-    if i % 50 == 0:
-        print('ACCURACY: {}'.format(sess.run(accuracy, feed_dict={x: test_images, y_: test_labels})))
+    if i % 100 == 0:
+        print('Step: {}, Accuracy: {}'.format(i, sess.run(accuracy, feed_dict={x: test_images, y_: test_labels})))
+t1 = datetime.datetime.now()
+print('Training time: {} seconds'.format((t1 - t0).seconds))
 
+predicted_labels = sess.run(tf.cast(tf.argmax(sess.run(y, feed_dict={x: submission_images}), 1), tf.int8))
 sess.close()
+
+np.savetxt('submission.csv',
+           np.c_[range(1, len(submission_images)+1), predicted_labels],
+           delimiter=',',
+           header='ImageId,Label',
+           comments='',
+           fmt='%d')
+
+print('done')

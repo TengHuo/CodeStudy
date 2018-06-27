@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07ee6c18-d9b8-4196-b9ec-bc5b2f0fdec6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnist_cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnist_cnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mnist_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnist_demo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,17 +14,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MNIST$mnist_cnn.coverage" NAME="mnist_cnn Coverage Results" MODIFIED="1529948029023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MNIST$mnist_cnn.coverage" NAME="mnist_cnn Coverage Results" MODIFIED="1530116941112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MNIST$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1529972750868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MNIST$mnist_demo.coverage" NAME="mnist_demo Coverage Results" MODIFIED="1529974524593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MNIST$mnist_demo.coverage" NAME="mnist_demo Coverage Results" MODIFIED="1530115034769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mnist_demo.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mnist_demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnist_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="354">
+              <caret line="110" column="47" lean-forward="true" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
               <folding>
                 <element signature="e#80#103#0" expanded="true" />
               </folding>
@@ -30,11 +32,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mnist_cnn.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mnist_cnn.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mnist_cnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="26" selection-start-line="4" selection-end-line="5" />
+            <state relative-caret-position="84">
+              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+              <folding>
+                <element signature="e#80#103#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,9 +71,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mnist_cnn.py" />
         <option value="$PROJECT_DIR$/mnist.py" />
+        <option value="$PROJECT_DIR$/tmp.py" />
         <option value="$PROJECT_DIR$/mnist_demo.py" />
+        <option value="$PROJECT_DIR$/mnist_cnn.py" />
       </list>
     </option>
   </component>
@@ -81,7 +87,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -104,7 +110,9 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -148,7 +156,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mnist_demo">
+  <component name="RunManager" selected="Python.mnist_cnn">
     <configuration name="mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MNIST" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,9 +221,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mnist_cnn" />
         <item itemvalue="Python.mnist_demo" />
         <item itemvalue="Python.mnist" />
-        <item itemvalue="Python.mnist_cnn" />
       </list>
     </recent_temporary>
   </component>
@@ -233,23 +241,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.31764707" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.31644005" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.69803923" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.34363413" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2353362" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23819743" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -259,27 +268,27 @@
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1988555" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.4301607" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1988555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.4301607" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5007153" side_tool="true" weight="0.31764707" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +308,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mnist_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#80#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="26" selection-start-line="4" selection-end-line="5" />
+          <folding>
+            <element signature="e#80#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mnist_demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -335,15 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1265">
           <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#1625#2180#0" />
-            <element signature="e#2398#2799#0" />
-            <element signature="e#2879#3282#0" />
-            <element signature="e#3367#3736#0" />
-            <element signature="e#3823#4221#0" />
-            <element signature="e#4414#5271#0" />
-            <element signature="e#5447#7080#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -366,27 +386,38 @@
         <state relative-caret-position="-2375" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist.py">
+    <entry file="file://$PROJECT_DIR$/mnist.py" />
+    <entry file="file://$PROJECT_DIR$/main.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="431">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
           <folding>
-            <element signature="e#80#98#0" expanded="true" />
+            <element signature="e#80#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="110" column="47" lean-forward="true" selection-start-line="110" selection-start-column="47" selection-end-line="110" selection-end-column="47" />
+          <folding>
+            <element signature="e#80#103#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mnist_cnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="26" selection-start-line="4" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnist_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+        <state relative-caret-position="84">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
             <element signature="e#80#103#0" expanded="true" />
           </folding>
