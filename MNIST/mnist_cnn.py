@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # Created by Teng on 25/06/2018
 
 import tensorflow as tf

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# Created by Teng on 24/06/2018
+# mnist_demo.py created by Teng on 29/Jun/2018
 
 import tensorflow as tf
 import pandas as pd
@@ -9,7 +8,7 @@ import datetime
 
 BATCH_SIZE = 200
 
-
+# image数据标准化，原始范围0-255
 def preprocess_images(images):
     processed_images = images.astype(np.float)
     processed_images = np.multiply(processed_images, 1.0 / 255.0)
@@ -51,10 +50,12 @@ print('Labels shape: {}'.format(labels.shape))
 x = tf.placeholder(tf.float32, [None, 784])
 y_ = tf.placeholder(tf.float32, [None, 10])
 
+# Single layer nn model
 # W = tf.Variable(tf.zeros([784, 10]))
 # b = tf.Variable(tf.zeros([10]))
 # y = tf.nn.softmax(tf.matmul(x, W) + b)
 
+# 2 hidden layer nn model
 layer1 = add_layer(x, 784, 100, activate_function=tf.nn.softmax)
 layer2 = add_layer(layer1, 100, 100, activate_function=tf.nn.softmax)
 y = add_layer(layer2, 100, 10, activate_function=tf.nn.softmax)
